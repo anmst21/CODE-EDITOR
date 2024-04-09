@@ -5,7 +5,6 @@ import bundle from "../bundler";
 import Resizable from "./resizable";
 import { Cell } from "../state";
 import { useActions } from "../hooks/use-actions";
-import { useTypedSelector } from "../hooks/use-typed-selector";
 
 interface CodeCellProps {
   cell: Cell;
@@ -31,7 +30,13 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
 
   return (
     <Resizable direction="vertical">
-      <div style={{ height: "100%", display: "flex", flexDirection: "row" }}>
+      <div
+        style={{
+          height: "calc(100% - 10px)",
+          display: "flex",
+          flexDirection: "row",
+        }}
+      >
         <Resizable direction="horizontal">
           <CodeEditor
             initialValue={cell.content}
