@@ -1,6 +1,6 @@
 {
   "name": "@notecode/local-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "files": [
     "dist"
@@ -23,9 +23,9 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@notecode/local-client": "^0.1.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "http-proxy-middleware": "^2.0.6",
-    "@notecode/local-client": "^0.1.0"
+    "http-proxy-middleware": "^2.0.6"
   }
 }
