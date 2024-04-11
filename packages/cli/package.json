@@ -1,26 +1,29 @@
 {
   "name": "notecode",
   "version": "1.0.0",
-  "license": "MIT",
   "description": "",
   "publishConfig": {
     "access": "public"
   },
+  "bin": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"produnction\\\""
+    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@notecode/local-client": "^1.0.0"
   },
   "devDependencies": {
+    "@types/node": "^20.8.4",
     "@notecode/local-api": "^1.0.0",
-    "@types/node": "^20.12.7",
-    "commander": "^12.0.0",
+    "commander": "^11.0.0",
     "esbuild": "0.8.26",
-    "typescript": "^5.4.5"
+    "typescript": "^5.2.2"
   }
 }
